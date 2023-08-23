@@ -8,6 +8,7 @@ var ctrlothers = require('../controllers/others');
 router.get('/about', ctrllocation.about);
 router.get('/login', ctrllocation.login);
 router.get('/menu', ctrllocation.menu);
+router.get('/payment', ctrllocation.payment);
 // router.get('/location3', ctrllocation.locationInfo3);
 // router.get('/location/review/new', ctrllocation.addReview);
 

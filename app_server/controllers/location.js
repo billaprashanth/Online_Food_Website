@@ -9,16 +9,9 @@ module.exports.login = function(req,res){
 module.exports.menu= function(req,res){
     res.render('menu',{title:'menu'});
 };
+module.exports.payment= function(req,res){
+    res.render('payment',{title:'menu'});
+};
 
-// module.exports.locationInfo3= function(req,res){
-//     res.render('location-info3',{title:'location '});
-// };
 
-// module.exports.addReview= function(req,res){
-//     res.render('location-review-form',{title:'review'});
-// };
-
-// module.exports.addReview= function(req,res){
-//     res.render('location-review-form',{title:'review'});
-// };
 

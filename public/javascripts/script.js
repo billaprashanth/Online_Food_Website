@@ -62,3 +62,12 @@ loginForm.addEventListener("submit", (e) => {
     console.log('Password:', password.value);
     // process and send to API 
 });
+
+
+// Payment Gate-away
+
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  alert('Payment successful! (Note: This is a simulated message)');
+  // Here you would handle the actual payment processing logic and secure data handling.
+});
