@@ -36,10 +36,10 @@ html
                   path(d='M12 16l0 -5')
                   path(d='M16 16v-3a2 2 0 0 0 -4 0')
           .profile-name
-            h2 Harland Sanders
+            h2= pageHeader.title
             .profile-bio
-              | I am the co-founder of, 
-              em Grill9 
-              | Restaurant and 
-              em Website Designer
+              |  #{pageHeader.para}
+              em  #{pageHeader.titlepara}
+              |   #{pageHeader.listpara}
+              em #{pageHeader.finalpara}
               | .
