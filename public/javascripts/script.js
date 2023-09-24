@@ -1,5 +1,6 @@
 'use strict';
 
+document.addEventListener("DOMContentLoaded", function () {
 
 // navbar variables
 const nav = document.querySelector('.navbar-nav');
@@ -7,8 +8,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 const cartToggleBtn = document.querySelector('.shopping-cart-btn');
 const navToggleBtn = document.querySelector('.menu-toggle-btn');
 const shoppingCart = document.querySelector('.cart-box');
-
-
 
 // nav toggle function
 const navToggleFunc = function () {
@@ -19,16 +18,11 @@ const navToggleFunc = function () {
 // shopping cart toggle function
 const cartToggleFunc = function () { shoppingCart.classList.toggle('active') }
 
-
-
 // add event on nav-toggle-btn
 navToggleBtn.addEventListener('click', function () {
-
   // If the shopping-cart has an `active` class, it will be removed.
   if (shoppingCart.classList.contains('active')) cartToggleFunc();
-
   navToggleFunc();
-
 });
 
 // add event on cart-toggle-btn
@@ -47,6 +41,9 @@ for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', navToggleFunc);
 
 }
+
+});
+
 
 //  Login and sign In page JS Code
 

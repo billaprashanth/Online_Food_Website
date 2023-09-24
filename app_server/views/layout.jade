@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Grill9 
+    title Food Hub
 
     //- Custom CSS links
     link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
@@ -52,42 +52,42 @@ html(lang='en')
               a.cart-item(href='#')
                 .img-box
                   img.product-img(src='./images/food/menu1.jpg', alt='product image', width='50', height='50', loading='lazy')
-                h5.product-name Saumon gravlax
+                h5.product-name Thick Shake
                 p.product-price
-                  span.small $
-                  | 9
+                  span.small ₹
+                  | 200
             li
               a.cart-item(href='#')
                 .img-box
                   img.product-img(src='./images/food/menu2.jpg', alt='product image', width='50', height='50', loading='lazy')
-                h5.product-name Chevrefried with honey
+                h5.product-name Salads
                 p.product-price
-                  span.small $
-                  | 14
+                  span.small ₹
+                  | 150
             li
               a.cart-item(href='#')
                 .img-box
                   img.product-img(src='./images/food/menu3.jpg', alt='product image', width='50', height='50', loading='lazy')
                 h5.product-name Crispy fish
                 p.product-price
-                  span.small $
-                  | 4
+                  span.small ₹
+                  | 799
             li
               a.cart-item(href='#')
                 .img-box
                   img.product-img(src='./images/food/menu4.jpg', alt='product image', width='50', height='50', loading='lazy')
-                h5.product-name Stracciatella
+                h5.product-name Burger
                 p.product-price
-                  span.small $
-                  | 11
+                  span.small ₹
+                  | 499
             li
               a.cart-item(href='#')
                 .img-box
                   img.product-img(src='./images/food/menu5.jpg', alt='product image', width='50', height='50', loading='lazy')
-                h5.product-name Sea bream carpaccio
+                h5.product-name Caesar Salad
                 p.product-price
-                  span.small $
-                  | 19
+                  span.small ₹
+                  | 599
           .cart-btn-group
             button.btn.btn-secondary View order
             button.btn.btn-primary Checkout
@@ -196,8 +196,8 @@ html(lang='en')
                   .wrapper
                     h3.product-name Cool Coffee
                     p.product-price
-                      span.small $
-                      | 11
+                      span.small ₹
+                      | 199
                   p.product-text
                     | Coffee beans, Water, Milk, Sugar, Cream, Cinnamon
                     
@@ -215,8 +215,8 @@ html(lang='en')
                   .wrapper
                     h3.product-name Chevrefrit au miel
                     p.product-price
-                      span.small $
-                      | 14
+                      span.small ₹
+                      | 149
                   p.product-text
                     | tomatoes, nori, feta cheese, mushrooms, rice noodles, corn,
                     | shrimp.
@@ -233,10 +233,10 @@ html(lang='en')
                   img.product-img(src='./images/food/menu3.jpg', alt='product image', width='200', loading='lazy')
                 .product-content
                   .wrapper
-                    h3.product-name Saumon Gravlax
+                    h3.product-name Saumon
                     p.product-price
-                      span.small $
-                      | 14
+                      span.small ₹
+                      | 689
                   p.product-text
                     | Salmon, Salt, Sugar, Fresh dill, Black pepper, Lemon zest
                     | .
@@ -254,8 +254,8 @@ html(lang='en')
                   .wrapper
                     h3.product-name Burger
                     p.product-price
-                      span.small $
-                      | 14
+                      span.small ₹
+                      | 259
                   p.product-text
                     | Ground beef, Buns, Lettuce, Tomato, Onion, Cheese, Pickles, Ketchup, Mustard
                     
@@ -273,8 +273,8 @@ html(lang='en')
                   .wrapper
                     h3.product-name Pastas
                     p.product-price
-                      span.small $
-                      | 14
+                      span.small ₹
+                      | 399
                   p.product-text
                     | Pasta, Olive Oil, Garlic, Tomatoes, Basil, Parmesan Cheese
                     | .
@@ -292,8 +292,8 @@ html(lang='en')
                   .wrapper
                     h3.product-name Salads
                     p.product-price
-                      span.small $
-                      | 14
+                      span.small ₹
+                      | 199
                   p.product-text
                     | Lettuce, Tomatoes, Cucumbers, Bell Peppers, Red Onions
                     | .
@@ -303,10 +303,10 @@ html(lang='en')
                     ion-icon(name='star')
                     ion-icon(name='star')
                     ion-icon(name='star')
-            
+        
           button.btn.btn-primary.btn-icon
             img(src='/images/food/menu.svg', alt='menu icon')
-            | Full menu
+            a(href='/menu') Full menu
         //- Testimonials section
         section#testimonials.testimonials
           h2.section-title What our customers say?

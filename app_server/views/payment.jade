@@ -4,25 +4,25 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/stylesheets/styles.css")
-    title Swiggy Payment
+    title Food Hub Payment
   body
     .payment-container
-      h2 Payment Details
+      h2= payment.details
       form#payment-form
-        label(for="card-number") Card Number:
+        label(for="card-number") #{payment.cardNumber}
         input(type="text", id="card-number", placeholder="Enter card number", required)
         
-        label(for="expiration") Expiration Date:
+        label(for="expiration") #{payment.expiration}
         input(type="text", id="expiration", placeholder="MM/YY", required)
         
-        label(for="cvv") CVV:
+        label(for="cvv") #{payment.cvv}
         input(type="text", id="cvv", placeholder="CVV", required)
         
-        h3 Payment Options:
+        h3= payment.options
         .payment-options
           .payment-option
             input(type="radio", id="credit-card", name="payment-option", value="credit-card", checked)
-            label(for="credit-card") Credit Card
+            label(for="credit-card") #{payment.creditcard}
           .payment-option
             input(type="radio", id="paytm", name="payment-option", value="paytm")
             label(for="paytm")
@@ -32,5 +32,6 @@ html(lang="en")
             label(for="phonepe")
               img.logo(src="./images/phonepay.png", alt="PhonePe")
         
-        button(type="submit") Pay Now
+        button(type="submit") #{payment.paynow}
+        a.nav-link(href='/') Home
     script(src="/javascripts/script.js")

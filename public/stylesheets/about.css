@@ -1,9 +1,11 @@
  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
 
 :root {
-    --background: #2C2C2C;
+    --background: #7b7575;
 }
-
+a > img{
+    margin: 50px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -164,9 +166,7 @@ body {
 }
 
 
-@media(max-width:576px){
 
-}
 
 
 

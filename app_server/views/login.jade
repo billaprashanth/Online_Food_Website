@@ -9,41 +9,45 @@ html(lang='en')
     .login-wrapper
       .login-side
         a(href='/', title='Logo')
-          img.logo(src='./assets/Login_logo1.svg', alt='Logo')
+          img.logo(src='./images/food/logo.svg', alt='Logo')
         .my-form__wrapper
           .login-welcome-row
-            h1 Welcome back &#x1F44F;
-            p Please enter your details!
+            div.row
+            h1(style='display: inline;')= signin.heading
+            span.emoji(style='font-size: 2em;') 👋
+            p=signin.details
           form.my-form
             .socials-row
               a(href='#', title='Use Google')
                 img(src='assets/google1.png', alt='Google')
-                | Log in with Google
+                | #{signin.google}
               a(href='#', title='Use Apple')
                 img(src='assets/apple1.png', alt='Apple')
-                | Log in with Apple
+                | #{signin.apple}
             .divider
               .divider-line
               | Or
               .divider-line
             .text-field
-              label(for='email') Email:
+              label(for='email') #{signin.email}
               input(type='email', id='email', name='email', placeholder='Your Email', required)
               img(src='assets/email1.svg', alt='Email Icon', title='Email Icon')
             .text-field
-              label(for='password') Password:
+              label(for='password') #{signin.password}
               input(id='password', type='password', name='password', placeholder='Your Password', title='Minimum 6 characters at least 1 Alphabet and 1 Number', pattern='^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$', required)
               img(src='assets/password1.svg', alt='Password Icon', title='Password Icon')
             input.my-form__button(type='submit', value='Login')
             .my-form__actions
               .my-form__row
-                span Did you forget your password?
-                a(href='#', title='Reset Password') Reset Password
+                span= signin.forgetPassword
+                a(href='#', title='Reset Password') #{signin.resetPassword}
               .my-form__signup
-                a(href='#', title='Create Account') Create Account
+                a(href='#', title='Create Account') #{signin.createAccount}
       .info-side
         img.mockup(src='assets/mock1.png', alt='Mock', class='mockup')
         .welcome-message
-          h2 Greetings from Grill9! 👋
-          p Your ultimate guide to navigating the Grill9 Restaurant by discovering the place with ease.
+          div.row
+          h2(style='display: inline; margin-right: 10px;')= signin.footerHeader
+          span.emoji(style='display: inline-block; font-size: 2em;') 👋
+          p=signin.footer
     script(src='/javascripts/script.js')
