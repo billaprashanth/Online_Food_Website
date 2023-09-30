@@ -3,11 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
-require('./app_server/models/db');
+require('./app_api/models/db');
+var routesApi = require('./app_api/routes/index');
 
+mongoose.connect('mongodb://127.0.0.1:27017/FoodHub', {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 30000, 
+});
+// mongodb://0.0.0.0:27017/FoodHub
 var app = express();
 
 // view engine setup
@@ -22,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//  using app_api
+app.use('/api', routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

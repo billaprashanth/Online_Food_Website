@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const pageHeaderSchema = new mongoose.Schema({
     title: String,
     para: String,
@@ -49,12 +48,18 @@ const signinSchema = new mongoose.Schema({
     footer: String,
 });
 
+const PageHeader = mongoose.model('PageHeader', pageHeaderSchema);
+const Payment = mongoose.model('Payment', paymentSchema);
+const PopularDish = mongoose.model('PopularDish', popularDishSchema);
+const Menu = mongoose.model('Menu', menuSchema);
+const Signin = mongoose.model('Signin', signinSchema);
 
+// Export the models
 module.exports = {
-    pageHeaderSchema,
-    paymentSchema,
-    menuSchema,
-    signinSchema,
+    PageHeader,
+    Payment,
+    PopularDish,
+    Menu,
+    Signin,
 };
-
-
+ 
